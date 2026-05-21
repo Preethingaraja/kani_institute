@@ -51,12 +51,10 @@ export default function Classes() {
               {/* Mode Badges */}
               <div className="flex gap-3 shrink-0">
                 <div className="flex flex-col items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/25 rounded-2xl px-5 py-3 min-w-[80px]">
-                  <span className="text-2xl">🌐</span>
                   <span className="text-xs font-extrabold tracking-wider uppercase">Online</span>
                   <span className="w-2 h-2 rounded-full bg-blue-300 animate-pulse"></span>
                 </div>
                 <div className="flex flex-col items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/25 rounded-2xl px-5 py-3 min-w-[80px]">
-                  <span className="text-2xl">🏫</span>
                   <span className="text-xs font-extrabold tracking-wider uppercase">Offline</span>
                   <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
                 </div>

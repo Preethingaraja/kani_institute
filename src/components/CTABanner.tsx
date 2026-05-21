@@ -23,11 +23,11 @@ export default function CTABanner() {
         <div className="flex justify-center gap-3 mb-8">
           <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-300 animate-pulse"></span>
-            🌐 Online Classes
+            Online Classes
           </span>
           <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-pulse"></span>
-            🏫 Offline Classes
+            Offline Classes
           </span>
         </div>
 

@@ -240,7 +240,7 @@ export default function ContactForm() {
                     <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
                   )}
                 </span>
-                {mode === 'Online' ? '🌐 Online' : '🏫 Offline'}
+                {mode === 'Online' ? 'Online' : 'Offline'}
               </label>
             ))}
           </div>

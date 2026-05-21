@@ -98,11 +98,11 @@ export default function Home() {
                 <div className="flex gap-2">
                   <span className="inline-flex items-center gap-1.5 bg-primary/10 border border-primary/20 text-primary text-xs font-bold px-3 py-1.5 rounded-full">
                     <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    🌐 Online
+                    Online
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    🏫 Offline
+                    Offline
                   </span>
                 </div>
               </div>

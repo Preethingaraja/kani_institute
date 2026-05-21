@@ -127,11 +127,11 @@ export default function Footer() {
                 <div className="flex gap-2 flex-wrap">
                   <span className="inline-flex items-center gap-1.5 bg-primary/20 border border-primary/30 text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-full">
                     <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                    🌐 Online
+                    Online
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-full">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    🏫 Offline
+                    Offline
                   </span>
                 </div>
               </li>
