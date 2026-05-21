@@ -9,6 +9,7 @@ import About from './pages/About';
 import Classes from './pages/Classes';
 import ClassDetail from './pages/ClassDetail';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 function ScrollToTop() {
   const location = useLocation();
@@ -88,6 +89,19 @@ function AnimatedRoutes() {
               transition={{ duration: 0.3 }}
             >
               <Contact />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Gallery />
             </motion.div>
           }
         />

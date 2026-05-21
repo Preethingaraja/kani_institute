@@ -28,22 +28,27 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const academicClasses = [
-    { name: 'Primary School (1-5)', path: '/classes/acad-1' },
-    { name: 'Middle School (6-8)', path: '/classes/acad-2' },
-    { name: 'High School (9-10)', path: '/classes/acad-3' },
+    { name: 'Classes 1 to 10 (All Subjects)', path: '/classes/acad-1' },
+    { name: 'Higher Secondary (11th & 12th)', path: '/classes/acad-2' },
   ];
 
   const skillClasses = [
-    { name: 'Abacus Coaching', path: '/classes/skill-8' },
-    { name: 'Chess Coaching', path: '/classes/skill-1' },
-    { name: 'Spoken Hindi & English', path: '/classes/skill-3' },
-    { name: 'Drawing & Painting', path: '/classes/skill-5' },
+    { name: 'Drawing & Painting', path: '/classes/skill-1' },
+    { name: 'Hindi Written (8 Levels)', path: '/classes/skill-2' },
+    { name: 'Spoken Hindi (8 Levels)', path: '/classes/skill-3' },
+    { name: 'Phonics (3 Levels)', path: '/classes/skill-4' },
+    { name: 'Spoken English', path: '/classes/skill-5' },
+    { name: 'Handwriting', path: '/classes/skill-6' },
+    { name: 'Chess', path: '/classes/skill-7' },
+    { name: 'Abacus', path: '/classes/skill-8' },
+    { name: 'Vedic Maths (4 Levels)', path: '/classes/skill-9' },
   ];
 
   const artClasses = [
     { name: 'Classical Dance', path: '/classes/art-1' },
-    { name: 'Keyboard & Guitar', path: '/classes/art-4' },
-    { name: 'Violin Instruction', path: '/classes/art-5' },
+    { name: 'Flute', path: '/classes/art-3' },
+    { name: 'Keyboard', path: '/classes/art-4' },
+    { name: 'Guitar', path: '/classes/art-5' },
   ];
 
   return (
@@ -104,17 +109,28 @@ export default function Navbar() {
                 onMouseEnter={() => setDropdownOpen(true)}
                 onMouseLeave={() => setDropdownOpen(false)}
               >
-                <button
-                  className={`font-medium text-sm transition-colors hover:text-accent flex items-center gap-1 cursor-pointer py-2 ${
-                    location.pathname.startsWith('/classes') ? 'text-accent' : 'text-text-dark'
-                  }`}
-                >
-                  Classes
-                  <ChevronDown
-                    size={14}
-                    className={`transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`}
-                  />
-                </button>
+                <div className="flex items-center gap-0.5">
+                  <Link
+                    to="/classes"
+                    className={`font-medium text-sm transition-colors hover:text-accent cursor-pointer py-2 ${
+                      location.pathname.startsWith('/classes') ? 'text-accent' : 'text-text-dark'
+                    }`}
+                  >
+                    Classes
+                  </Link>
+                  <button
+                    className={`cursor-pointer py-2 px-0.5 transition-colors hover:text-accent ${
+                      location.pathname.startsWith('/classes') ? 'text-accent' : 'text-text-dark'
+                    }`}
+                    onClick={() => setDropdownOpen((prev) => !prev)}
+                    aria-label="Toggle classes menu"
+                  >
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                </div>
 
                 {/* Dropdown Megamenu */}
                 <AnimatePresence>
@@ -216,6 +232,23 @@ export default function Navbar() {
                   ></span>
                 </Link>
               </li>
+
+              {/* Gallery */}
+              <li>
+                <Link
+                  to="/gallery"
+                  className={`font-medium text-sm transition-colors hover:text-accent relative group ${
+                    location.pathname === '/gallery' ? 'text-accent' : 'text-text-dark'
+                  }`}
+                >
+                  Gallery
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                      location.pathname === '/gallery' ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  ></span>
+                </Link>
+              </li>
             </ul>
 
             <Link
@@ -244,7 +277,8 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100 overflow-hidden shadow-inner"
+            className="md:hidden bg-white border-t border-gray-100 shadow-inner"
+            style={{ maxHeight: 'calc(100vh - 64px)', overflowY: 'auto' }}
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               <ul className="flex flex-col gap-4">
@@ -364,6 +398,16 @@ export default function Navbar() {
                     }`}
                   >
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/gallery"
+                    className={`block font-semibold text-base py-1.5 ${
+                      location.pathname === '/gallery' ? 'text-accent' : 'text-text-dark'
+                    }`}
+                  >
+                    Gallery
                   </Link>
                 </li>
               </ul>

@@ -1,4 +1,4 @@
-import { Star, Quote } from 'lucide-react';
+﻿import { Star, Quote } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -99,7 +99,7 @@ export default function TestimonialCarousel() {
       name: "Mkumar Mkumar",
       role: "Parent (Google Review)",
       rating: 5,
-      text: "Best coaching in Salem. All classes are in one place for students—awesome Chess class, drawing class, abacus classes, and academic tutions are all taken. Really good teaching and a great learning environment.",
+      text: "Best coaching in Salem. All classes are in one place for students-awesome Chess class, drawing class, abacus classes, and academic tutions are all taken. Really good teaching and a great learning environment.",
       gender: "boy"
     }
   ];

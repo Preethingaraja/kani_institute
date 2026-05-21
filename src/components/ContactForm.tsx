@@ -13,6 +13,7 @@ export default function ContactForm() {
     childName: '',
     gradeClass: '',
     courseInterested: prefilledClass,
+    learningMode: '',
     phone: '',
     message: '',
   });
@@ -32,6 +33,7 @@ export default function ContactForm() {
     if (!formData.childName.trim()) tempErrors.childName = "Child's name is required";
     if (!formData.gradeClass.trim()) tempErrors.gradeClass = 'Grade or class is required';
     if (!formData.courseInterested) tempErrors.courseInterested = 'Please select a class';
+    if (!formData.learningMode) tempErrors.learningMode = 'Please select a learning mode';
     if (!formData.phone.trim()) {
       tempErrors.phone = 'Phone number is required';
     } else if (!/^\d{10}$/.test(formData.phone.trim())) {
@@ -65,6 +67,7 @@ export default function ContactForm() {
 • *Child's Name:* ${formData.childName}
 • *Grade / Class:* ${formData.gradeClass}
 • *Class of Interest:* ${formData.courseInterested}
+• *Learning Mode:* ${formData.learningMode}
 • *Phone Number:* ${formData.phone}
 • *Message:* ${formData.message}`;
 
@@ -80,6 +83,7 @@ export default function ContactForm() {
         childName: '',
         gradeClass: '',
         courseInterested: '',
+        learningMode: '',
         phone: '',
         message: '',
       });
@@ -200,7 +204,47 @@ export default function ContactForm() {
               </option>
             ))}
           </select>
-          {errors.courseInterested && <p className="text-xs text-accent mt-1">{errors.courseInterested}</p>}
+        </div>
+
+        {/* Learning Mode */}
+        <div>
+          <label className="block text-xs font-semibold text-text-dark mb-2.5 uppercase tracking-wider">
+            Preferred Learning Mode
+          </label>
+          <div className="flex gap-4">
+            {['Online', 'Offline'].map((mode) => (
+              <label
+                key={mode}
+                className={`flex-1 flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl border-2 cursor-pointer transition-all text-sm font-semibold ${
+                  formData.learningMode === mode
+                    ? mode === 'Online'
+                      ? 'border-primary bg-primary/10 text-primary'
+                      : 'border-secondary bg-secondary/10 text-secondary'
+                    : 'border-gray-200 bg-bg-light text-text-muted hover:border-gray-300'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="learningMode"
+                  value={mode}
+                  checked={formData.learningMode === mode}
+                  onChange={handleChange}
+                  className="sr-only"
+                />
+                <span className={`w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                  formData.learningMode === mode
+                    ? mode === 'Online' ? 'border-primary bg-primary' : 'border-secondary bg-secondary'
+                    : 'border-gray-300'
+                }`}>
+                  {formData.learningMode === mode && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  )}
+                </span>
+                {mode === 'Online' ? '🌐 Online' : '🏫 Offline'}
+              </label>
+            ))}
+          </div>
+          {errors.learningMode && <p className="text-xs text-accent mt-1">{errors.learningMode}</p>}
         </div>
 
         {/* Phone Number */}

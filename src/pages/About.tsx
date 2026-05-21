@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Target, Compass, Sparkles, Award, Mail, Globe, Camera } from 'lucide-react';
+import founderImg from '../assets/founder.png';
 
 export default function About() {
   const pageVariants = {
@@ -95,9 +96,9 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-tr from-accent to-secondary rounded-3xl transform rotate-3 scale-102 opacity-20"></div>
               <div className="relative border-4 border-white bg-white shadow-2xl rounded-3xl overflow-hidden aspect-[4/5]">
                 <img
-                  src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=600"
+                  src={founderImg}
                   alt="Mrs. Mekala Manikandan Profile"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
               </div>
@@ -122,15 +123,11 @@ export default function About() {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-text-muted">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-accent"></span>
-                  M.Sc.
+                  M.Sc. (Maths)
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-accent"></span>
                   B.Ed.
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-accent"></span>
-                  PGDCA
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-accent"></span>
@@ -168,9 +165,9 @@ export default function About() {
                   <Camera size={16} />
                 </a>
                 <a
-                  href="mailto:mekalammks@gmail.com"
+                  href="mailto:kaniinstitute28@gmail.com"
                   className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-text-muted hover:text-white hover:bg-accent hover:border-accent transition-all"
-                  title="Email: mekalammks@gmail.com"
+                  title="Email: kaniinstitute28@gmail.com"
                 >
                   <Mail size={16} />
                 </a>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Users, GraduationCap, HeartHandshake, ArrowRight, Palette, BookOpen, Music, Languages, Lightbulb, Activity } from 'lucide-react';
+import founderImg from '../assets/founder.png';
 import HeroSection from '../components/HeroSection';
 import StatsBar from '../components/StatsBar';
 import ClassCard from '../components/ClassCard';
@@ -22,7 +23,7 @@ export default function Home() {
     {
       icon: GraduationCap,
       title: "Expert Faculty",
-      desc: "Headed by Mrs. Mekala Manikandan, M.Sc., B.Ed., PGDCA, B.A. (Hindi), with years of teaching experience.",
+      desc: "Headed by Mrs. Mekala Manikandan, M.Sc. (Maths), B.Ed., B.A. (Hindi), with years of teaching experience.",
       color: "text-primary bg-primary/10"
     },
     {
@@ -86,7 +87,7 @@ export default function Home() {
               <p className="text-text-muted text-base leading-relaxed">
                 We believe in providing a stress-free learning environment that builds confidence, improves problem-solving abilities, and fosters lifelong curiosity.
               </p>
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   to="/about"
                   className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
@@ -94,6 +95,16 @@ export default function Home() {
                   Read Our Full Story
                   <ArrowRight size={18} />
                 </Link>
+                <div className="flex gap-2">
+                  <span className="inline-flex items-center gap-1.5 bg-primary/10 border border-primary/20 text-primary text-xs font-bold px-3 py-1.5 rounded-full">
+                    <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    🌐 Online
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    🏫 Offline
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -103,15 +114,15 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-3xl transform -rotate-3 scale-102 opacity-15"></div>
                 <div className="relative border-4 border-white bg-white shadow-2xl rounded-3xl overflow-hidden aspect-[4/5]">
                   <img
-                    src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=600"
+                    src={founderImg}
                     alt="Mrs. Mekala Manikandan"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     loading="lazy"
                   />
                   {/* Overlay Card */}
                   <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-gray-100 text-left">
                     <h4 className="font-display font-bold text-lg text-text-dark">Mrs. Mekala Manikandan</h4>
-                    <p className="text-xs text-text-muted font-medium mb-1">M.Sc., B.Ed., PGDCA, B.A. (Hindi)</p>
+                    <p className="text-xs text-text-muted font-medium mb-1">M.Sc. (Maths), B.Ed., B.A. (Hindi)</p>
                     <p className="text-[10px] uppercase font-bold text-accent tracking-wider">Founder & Managing Director</p>
                   </div>
                 </div>

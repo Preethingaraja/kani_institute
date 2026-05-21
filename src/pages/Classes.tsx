@@ -21,7 +21,7 @@ export default function Classes() {
   return (
     <main className="pt-20 md:pt-28 pb-20 bg-bg-light min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
-        
+
         {/* Page Header */}
         <section className="text-center max-w-4xl mx-auto mb-12">
           <span className="text-sm font-accent tracking-widest text-secondary uppercase bg-secondary/10 px-3 py-1 rounded-full">
@@ -35,13 +35,33 @@ export default function Classes() {
           </p>
         </section>
 
-        {/* Academic Tuition Notification Banner */}
+        {/* Online / Offline Highlight Banner */}
         <section className="max-w-4xl mx-auto mb-12">
-          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center text-primary">
-            <h3 className="font-display font-bold text-lg md:text-xl mb-1">Academic Tuition Support</h3>
-            <p className="text-sm md:text-base opacity-90 leading-relaxed">
-              Classes 1 to 10 - All Subjects | 11th & 12th - Maths, Physics, Chemistry, Accountancy
-            </p>
+          <div className="relative bg-gradient-to-r from-primary via-[#4a35b8] to-secondary rounded-3xl p-6 md:p-8 text-white overflow-hidden shadow-xl">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-white/70 mb-1">Now Available</p>
+                <h3 className="font-display font-bold text-xl md:text-2xl leading-snug">
+                  Classes 1-10 · All Subjects
+                </h3>
+                <p className="text-white/80 text-sm font-medium mt-1">11th & 12th · Maths, Physics, Chemistry, Accountancy</p>
+              </div>
+              {/* Mode Badges */}
+              <div className="flex gap-3 shrink-0">
+                <div className="flex flex-col items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/25 rounded-2xl px-5 py-3 min-w-[80px]">
+                  <span className="text-2xl">🌐</span>
+                  <span className="text-xs font-extrabold tracking-wider uppercase">Online</span>
+                  <span className="w-2 h-2 rounded-full bg-blue-300 animate-pulse"></span>
+                </div>
+                <div className="flex flex-col items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/25 rounded-2xl px-5 py-3 min-w-[80px]">
+                  <span className="text-2xl">🏫</span>
+                  <span className="text-xs font-extrabold tracking-wider uppercase">Offline</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

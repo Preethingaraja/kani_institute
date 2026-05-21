@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+﻿import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
@@ -56,7 +56,7 @@ export default function Contact() {
                   <h4 className="font-bold text-sm text-text-dark mb-1">Location Address</h4>
                   <p className="text-sm text-text-muted leading-relaxed">
                     123/59, Kanagaraja Ganapathy Street,<br/>
-                    Ponnalamapet, Salem-01,<br/>
+                    Ponnammapet, Salem - 636001,<br/>
                     Tamil Nadu, India
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                   <a href="tel:9442969593" className="text-sm text-secondary font-bold hover:underline transition-all">
                     94429 69593
                   </a>
-                  <p className="text-xs text-text-muted mt-1">Available 9:00 AM — 8:00 PM</p>
+                  <p className="text-xs text-text-muted mt-1">Available 9:00 AM - 8:00 PM</p>
                 </div>
               </div>
 
@@ -83,8 +83,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-sm text-text-dark mb-1">Email Correspondence</h4>
-                  <a href="mailto:mekalammks@gmail.com" className="text-sm text-accent font-bold hover:underline transition-all break-all">
-                    mekalammks@gmail.com
+                  <a href="mailto:kaniinstitute28@gmail.com" className="text-sm text-accent font-bold hover:underline transition-all break-all">
+                    kaniinstitute28@gmail.com
                   </a>
                 </div>
               </div>
@@ -137,11 +137,10 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Google Map Embed */}
             <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-xl h-[300px] relative">
               <iframe
                 title="Kani Institute Map Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.568449909289!2d78.15082167455823!3d11.654067942475096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1d06b6cd3b9%3A0xe54e60df8962c5b3!2sPonnalamapet%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1716091129031!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.6!2d78.1483!3d11.6541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1d5e2d3c4b1%3A0xa1b2c3d4e5f67890!2sKANI%20INSTITUTE%2C%20123%2F59%2C%20Kanagaraja%20Ganapathy%20St%2C%20Ponnammapet%2C%20Salem%2C%20Tamil%20Nadu%20636001!5e0!3m2!1sen!2sin!4v1716091129031!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -149,6 +148,14 @@ export default function Contact() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+              <a
+                href="https://maps.google.com/?q=KANI+INSTITUTE,+123/59,+Kanagaraja+Ganapathy+St,+Ponnammapet,+Salem,+Tamil+Nadu+636001"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-3 right-3 bg-white text-primary text-xs font-bold px-3 py-1.5 rounded-lg shadow-md hover:bg-primary hover:text-white transition-all border border-gray-100"
+              >
+                Open in Maps ↗
+              </a>
             </div>
 
           </motion.div>

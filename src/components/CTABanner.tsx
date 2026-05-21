@@ -15,9 +15,21 @@ export default function CTABanner() {
         <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-6 mb-4 leading-tight">
           Unlock Your Child’s Potential Today
         </h2>
-        <p className="text-gray-200 text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-200 text-base md:text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
           Enroll your child now to ensure personal attention and a holistic educational environment. Limited seats are available for all classes!
         </p>
+
+        {/* Online / Offline Mode Pills */}
+        <div className="flex justify-center gap-3 mb-8">
+          <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg">
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-300 animate-pulse"></span>
+            🌐 Online Classes
+          </span>
+          <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-300 animate-pulse"></span>
+            🏫 Offline Classes
+          </span>
+        </div>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a

@@ -66,7 +66,7 @@ export default function Footer() {
               <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-accent rounded-full"></span>
             </h3>
             <ul className="space-y-3">
-              {['Home', 'About', 'Classes', 'Contact'].map((item) => (
+              {['Home', 'About', 'Classes', 'Gallery', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
@@ -111,7 +111,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <MapPin size={18} className="text-accent shrink-0 mt-0.5" />
-                <span>123/59, Kanagaraja Ganapathy Street,<br/>Ponnalamapet, Salem-01</span>
+                <span>123/59, Kanagaraja Ganapathy Street,<br/>Ponnammapet, Salem - 636001</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Phone size={18} className="text-accent shrink-0" />
@@ -119,7 +119,21 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <Mail size={18} className="text-accent shrink-0" />
-                <a href="mailto:mekalammks@gmail.com" className="hover:text-white transition-colors">mekalammks@gmail.com</a>
+                <a href="mailto:kaniinstitute28@gmail.com" className="hover:text-white transition-colors">kaniinstitute28@gmail.com</a>
+              </li>
+              {/* Online / Offline badge */}
+              <li className="pt-2">
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Classes Available</p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="inline-flex items-center gap-1.5 bg-primary/20 border border-primary/30 text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-full">
+                    <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                    🌐 Online
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-full">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    🏫 Offline
+                  </span>
+                </div>
               </li>
             </ul>
           </div>
