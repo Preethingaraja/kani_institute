@@ -24,7 +24,7 @@ export default function Footer() {
               Salem's premier destination for holistic child development, offering academic tuition, skill development, and performing arts classes.
             </p>
             <div className="flex gap-4 pt-4">
-              <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" title="Facebook: Mekala Mani">
+              <a href="https://www.facebook.com/share/1DGn7xrdkQ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" title="Facebook: Kani Institute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -39,7 +39,7 @@ export default function Footer() {
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </a>
-              <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" title="Instagram: Kani Institute">
+              <a href="https://www.instagram.com/kaniinstitute?utm_source=qr&igsh=MWd3Nmhlb3I1dTVoMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" title="Instagram: Kani Institute">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"

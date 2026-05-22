@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -31,8 +31,42 @@ import img25 from '../assets/Classical dance.jpeg';
 import img26 from '../assets/National level Abacus competition.jpeg';
 import img27 from '../assets/Summercamp 2025.jpeg';
 import img28 from '../assets/World record event.jpeg';
+import img29 from '../assets/Chess district tournament.jpeg';
+import img30 from '../assets/Salem district level tournament.jpeg';
+import img31 from '../assets/Chess tournament.jpeg';
+import img32 from '../assets/Chess.jpeg';
+import img33 from '../assets/Abacus.jpeg';
+import img34 from '../assets/Classical dance program.jpeg';
+import img35 from '../assets/National level Abacus competition.png';
+import img36 from '../assets/Drawing.jpeg';
+import img37 from '../assets/Drawing1.jpeg';
+import img38 from '../assets/Tuition.png';
+import img39 from '../assets/Chess FIDE players.jpeg';
+import img40 from '../assets/Chess.png';
+import img41 from '../assets/International book of records abacus competition.png';
+import img42 from '../assets/Board exam preparation.jpeg';
+import img43 from '../assets/New year celebration.jpeg';
+import img44 from '../assets/New year celebration1.jpeg';
+import img45 from '../assets/New year celebration.png';
+import img46 from '../assets/New year celebration2.jpeg';
+import img47 from '../assets/Classical dance program1.jpeg';
+import img48 from '../assets/Classical dance program2.jpeg';
+import img49 from '../assets/Chess state level tournament.jpeg';
+import img50 from '../assets/Drawing Competition winner.jpeg';
+import img51 from '../assets/Chess district level competition.jpeg';
+import img52 from '../assets/Abacus International book of records.jpeg';
+import img53 from '../assets/Abacus International of records winner.jpeg';
+import img54 from '../assets/State level chess tournament winner.jpeg';
+import img55 from '../assets/Summer camp.jpeg';
+import img56 from '../assets/Tuition4.jpeg';
+import img57 from '../assets/Tuition5.jpeg';
+import img58 from '../assets/Chess students.jpeg';
+import img59 from '../assets/Sharing day.jpeg';
+import img60 from '../assets/Abacus International level competition.png';
+import img61 from '../assets/Abacus champions.png';
+import img62 from '../assets/Got best center award.png';
 
-type Category = 'All' | 'Academic' | 'Abacus' | 'Dance' | 'Music' | 'Language' | 'Events';
+type Category = 'All' | 'Academic' | 'Abacus' | 'Dance' | 'Music' | 'Language' | 'Events' | 'Sports' | 'Arts';
 
 interface GalleryItem {
   id: number;
@@ -70,9 +104,43 @@ const galleryItems: GalleryItem[] = [
   { id: 26, src: img26, title: 'National Level Abacus Competition',        category: 'Abacus' },
   { id: 27, src: img27, title: 'Summer Camp 2025',                         category: 'Events' },
   { id: 28, src: img28, title: 'World Record Event',                       category: 'Events' },
+  { id: 29, src: img29, title: 'Chess District Tournament', category: 'Sports' },
+  { id: 30, src: img30, title: 'Salem District Level Tournament', category: 'Sports' },
+  { id: 31, src: img31, title: 'Chess Tournament', category: 'Sports' },
+  { id: 32, src: img32, title: 'Chess', category: 'Sports' },
+  { id: 33, src: img33, title: 'Abacus', category: 'Abacus' },
+  { id: 34, src: img34, title: 'Classical Dance Program', category: 'Dance' },
+  { id: 35, src: img35, title: 'National Level Abacus Competition', category: 'Abacus' },
+  { id: 36, src: img36, title: 'Drawing', category: 'Arts' },
+  { id: 37, src: img37, title: 'Drawing', category: 'Arts' },
+  { id: 38, src: img38, title: 'Tuition', category: 'Academic' },
+  { id: 39, src: img39, title: 'Chess FIDE Players', category: 'Sports' },
+  { id: 40, src: img40, title: 'Chess', category: 'Sports' },
+  { id: 41, src: img41, title: 'International Book of Records Abacus Competition', category: 'Abacus' },
+  { id: 42, src: img42, title: 'Board Exam Preparation', category: 'Academic' },
+  { id: 43, src: img43, title: 'New Year Celebration', category: 'Events' },
+  { id: 44, src: img44, title: 'New Year Celebration', category: 'Events' },
+  { id: 45, src: img45, title: 'New Year Celebration', category: 'Events' },
+  { id: 46, src: img46, title: 'New Year Celebration', category: 'Events' },
+  { id: 47, src: img47, title: 'Classical Dance Program', category: 'Dance' },
+  { id: 48, src: img48, title: 'Classical Dance Program', category: 'Dance' },
+  { id: 49, src: img49, title: 'Chess State Level Tournament', category: 'Sports' },
+  { id: 50, src: img50, title: 'Drawing Competition Winner', category: 'Arts' },
+  { id: 51, src: img51, title: 'Chess District Level Competition', category: 'Sports' },
+  { id: 52, src: img52, title: 'Abacus International Book of Records', category: 'Abacus' },
+  { id: 53, src: img53, title: 'Abacus International of Records Winner', category: 'Abacus' },
+  { id: 54, src: img54, title: 'State Level Chess Tournament Winner', category: 'Sports' },
+  { id: 55, src: img55, title: 'Summer Camp', category: 'Events' },
+  { id: 56, src: img56, title: 'Tuition', category: 'Academic' },
+  { id: 57, src: img57, title: 'Tuition', category: 'Academic' },
+  { id: 58, src: img58, title: 'Chess Students', category: 'Sports' },
+  { id: 59, src: img59, title: 'Sharing Day', category: 'Events' },
+  { id: 60, src: img60, title: 'Abacus International Level Competition', category: 'Abacus' },
+  { id: 61, src: img61, title: 'Abacus Champions', category: 'Abacus' },
+  { id: 62, src: img62, title: 'Got Best Center Award', category: 'Events' },
 ];
 
-const categories: Category[] = ['All', 'Academic', 'Abacus', 'Dance', 'Music', 'Language', 'Events'];
+const categories: Category[] = ['All', 'Academic', 'Abacus', 'Dance', 'Music', 'Language', 'Events', 'Sports', 'Arts'];
 
 const categoryColors: Record<Category, string> = {
   All:      'bg-primary text-white border-primary',
@@ -82,6 +150,8 @@ const categoryColors: Record<Category, string> = {
   Music:    'bg-purple-500 text-white border-purple-500',
   Language: 'bg-orange-500 text-white border-orange-500',
   Events:   'bg-emerald-500 text-white border-emerald-500',
+  Sports:   'bg-red-500 text-white border-red-500',
+  Arts:     'bg-indigo-500 text-white border-indigo-500',
 };
 
 const categoryInactive: Record<Category, string> = {
@@ -92,6 +162,8 @@ const categoryInactive: Record<Category, string> = {
   Music:    'border-purple-300 text-purple-600 hover:bg-purple-50',
   Language: 'border-orange-300 text-orange-600 hover:bg-orange-50',
   Events:   'border-emerald-300 text-emerald-600 hover:bg-emerald-50',
+  Sports:   'border-red-300 text-red-600 hover:bg-red-50',
+  Arts:     'border-indigo-300 text-indigo-600 hover:bg-indigo-50',
 };
 
 const categoryBadge: Record<Category, string> = {
@@ -102,6 +174,8 @@ const categoryBadge: Record<Category, string> = {
   Music:    'bg-purple-100 text-purple-700',
   Language: 'bg-orange-100 text-orange-700',
   Events:   'bg-emerald-100 text-emerald-700',
+  Sports:   'bg-red-100 text-red-700',
+  Arts:     'bg-indigo-100 text-indigo-700',
 };
 
 export default function Gallery() {
