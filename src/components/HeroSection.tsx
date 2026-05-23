@@ -1,8 +1,35 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Award, ArrowRight } from 'lucide-react';
 
+import img1 from '../assets/12th tuition1.jpeg';
+import img2 from '../assets/Abacus champions.png';
+import img3 from '../assets/World record event.jpeg';
+import img4 from '../assets/State level Abacus competition 2025.jpeg';
+import img5 from '../assets/National level Abacus competition.jpeg';
+import img6 from '../assets/New year celebration.png';
+import img7 from '../assets/New year celebration2.jpeg';
+
+const heroImages = [
+  { src: img1, alt: "12th Tuition" },
+  { src: img2, alt: "Abacus Champions" },
+  { src: img3, alt: "World Record Event" },
+  { src: img4, alt: "State Level Abacus Competition 2025" },
+  { src: img5, alt: "National Level Abacus Competition" },
+  { src: img6, alt: "New Year Celebration" },
+  { src: img7, alt: "New Year Celebration 2" },
+];
+
 export default function HeroSection() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -84,18 +111,24 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: 'easeOut' as const }}
             className="relative flex justify-center"
           >
-            <div className="relative w-full max-w-[500px]">
+            <div className="relative w-full max-w-[600px] lg:max-w-[650px]">
               {/* Outer Decorative Rings */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-6 scale-102 opacity-20 blur-lg animate-pulse"></div>
               
               {/* Image Frame */}
               <div className="relative border-4 border-white bg-white shadow-2xl rounded-3xl overflow-hidden aspect-[4/3]">
-                <img
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=800"
-                  alt="Students learning happily at Kani Institute"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentImageIndex}
+                    src={heroImages[currentImageIndex].src}
+                    alt={heroImages[currentImageIndex].alt}
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut' }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </AnimatePresence>
               </div>
 
               {/* Floating Stat Badge */}
