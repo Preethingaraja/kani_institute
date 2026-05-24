@@ -154,7 +154,7 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
               <a
-                href="https://www.google.com/maps/dir/11.659302,78.193776/KANI+INSTITUTE,+123%2F59,+Kanagaraja+Ganapathy+St,+Ponnammapet,+Salem,+Tamil+Nadu+636001/@11.6611904,78.1618845,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3babf1b15efc14bf:0x5d6b6834a5cc344b!2m2!1d78.1718643!2d11.6606783?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
+                href="https://maps.google.com/?q=KANI+INSTITUTE,+123/59,+Kanagaraja+Ganapathy+St,+Ponnammapet,+Salem,+Tamil+Nadu+636001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute bottom-3 right-3 bg-white text-primary text-xs font-bold px-3 py-1.5 rounded-lg shadow-md hover:bg-primary hover:text-white transition-all border border-gray-100"
