@@ -1,4 +1,4 @@
-﻿import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
@@ -21,7 +21,7 @@ export default function Contact() {
       className="pt-20 md:pt-28 pb-20 bg-bg-light min-h-screen"
     >
       <div className="container mx-auto px-4 md:px-6">
-        
+
         {/* Page Header */}
         <section className="text-center max-w-4xl mx-auto mb-16">
           <span className="text-sm font-accent tracking-widest text-accent uppercase bg-accent/10 px-3 py-1 rounded-full">
@@ -37,16 +37,21 @@ export default function Contact() {
 
         {/* Two-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
-          
-          {/* Left: Contact Info */}
+
+          {/* Left: Enquiry Form */}
+          <motion.div variants={itemVariants} className="lg:col-span-7">
+            <ContactForm />
+          </motion.div>
+
+          {/* Right: Contact Info */}
           <motion.div variants={itemVariants} className="lg:col-span-5 space-y-8">
-            
+
             {/* Info Cards */}
             <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl space-y-6">
               <h3 className="font-display font-bold text-2xl text-text-dark mb-4">
                 Our Office
               </h3>
-              
+
               {/* Address */}
               <div className="flex items-start gap-4">
                 <div className="bg-primary/10 text-primary p-3 rounded-xl shrink-0 mt-0.5">
@@ -55,8 +60,8 @@ export default function Contact() {
                 <div>
                   <h4 className="font-bold text-sm text-text-dark mb-1">Location Address</h4>
                   <p className="text-sm text-text-muted leading-relaxed">
-                    123/59, Kanagaraja Ganapathy Street,<br/>
-                    Ponnammapet, Salem - 636001,<br/>
+                    123/59, Kanagaraja Ganapathy Street,<br />
+                    Ponnammapet, Salem - 636001,<br />
                     Tamil Nadu, India
                   </p>
                 </div>
@@ -158,11 +163,6 @@ export default function Contact() {
               </a>
             </div>
 
-          </motion.div>
-
-          {/* Right: Enquiry Form */}
-          <motion.div variants={itemVariants} className="lg:col-span-7">
-            <ContactForm />
           </motion.div>
 
         </div>

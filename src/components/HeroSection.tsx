@@ -114,7 +114,7 @@ export default function HeroSection() {
             <div className="relative w-full max-w-[600px] lg:max-w-[650px]">
               {/* Outer Decorative Rings */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-6 scale-102 opacity-20 blur-lg animate-pulse"></div>
-              
+
               {/* Image Frame */}
               <div className="relative border-4 border-white bg-white shadow-2xl rounded-3xl overflow-hidden aspect-[4/3]">
                 <AnimatePresence mode="wait">

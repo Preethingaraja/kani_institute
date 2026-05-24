@@ -76,7 +76,7 @@ export default function ContactForm() {
     setTimeout(() => {
       // Open owner WhatsApp in new tab
       window.open(whatsappUrl, '_blank');
-      
+
       setStatus('success');
       setFormData({
         fullName: '',
@@ -136,9 +136,8 @@ export default function ContactForm() {
             value={formData.fullName}
             onChange={handleChange}
             placeholder="Enter your full name"
-            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${
-              errors.fullName ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
-            }`}
+            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${errors.fullName ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
+              }`}
           />
           {errors.fullName && <p className="text-xs text-accent mt-1">{errors.fullName}</p>}
         </div>
@@ -156,9 +155,8 @@ export default function ContactForm() {
               value={formData.childName}
               onChange={handleChange}
               placeholder="Child's full name"
-              className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${
-                errors.childName ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
-              }`}
+              className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${errors.childName ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
+                }`}
             />
             {errors.childName && <p className="text-xs text-accent mt-1">{errors.childName}</p>}
           </div>
@@ -175,9 +173,8 @@ export default function ContactForm() {
               value={formData.gradeClass}
               onChange={handleChange}
               placeholder="e.g. Class 8 or Grade 5"
-              className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${
-                errors.gradeClass ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
-              }`}
+              className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${errors.gradeClass ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
+                }`}
             />
             {errors.gradeClass && <p className="text-xs text-accent mt-1">{errors.gradeClass}</p>}
           </div>
@@ -193,9 +190,8 @@ export default function ContactForm() {
             name="courseInterested"
             value={formData.courseInterested}
             onChange={handleChange}
-            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all appearance-none cursor-pointer ${
-              errors.courseInterested ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
-            }`}
+            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all appearance-none cursor-pointer ${errors.courseInterested ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
+              }`}
           >
             <option value="">-- Select a Class --</option>
             {classes.map((item: ClassItem) => (
@@ -215,13 +211,12 @@ export default function ContactForm() {
             {['Online', 'Offline'].map((mode) => (
               <label
                 key={mode}
-                className={`flex-1 flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl border-2 cursor-pointer transition-all text-sm font-semibold ${
-                  formData.learningMode === mode
+                className={`flex-1 flex items-center justify-center gap-2.5 px-4 py-3 rounded-xl border-2 cursor-pointer transition-all text-sm font-semibold ${formData.learningMode === mode
                     ? mode === 'Online'
                       ? 'border-primary bg-primary/10 text-primary'
                       : 'border-secondary bg-secondary/10 text-secondary'
                     : 'border-gray-200 bg-bg-light text-text-muted hover:border-gray-300'
-                }`}
+                  }`}
               >
                 <input
                   type="radio"
@@ -231,11 +226,10 @@ export default function ContactForm() {
                   onChange={handleChange}
                   className="sr-only"
                 />
-                <span className={`w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center shrink-0 ${
-                  formData.learningMode === mode
+                <span className={`w-3.5 h-3.5 rounded-full border-2 flex items-center justify-center shrink-0 ${formData.learningMode === mode
                     ? mode === 'Online' ? 'border-primary bg-primary' : 'border-secondary bg-secondary'
                     : 'border-gray-300'
-                }`}>
+                  }`}>
                   {formData.learningMode === mode && (
                     <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
                   )}
@@ -259,9 +253,8 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="10-digit mobile number"
-            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${
-              errors.phone ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
-            }`}
+            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all ${errors.phone ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
+              }`}
           />
           {errors.phone && <p className="text-xs text-accent mt-1">{errors.phone}</p>}
         </div>
@@ -278,9 +271,8 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Describe your queries or specific requirements..."
             rows={4}
-            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all resize-none ${
-              errors.message ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
-            }`}
+            className={`w-full bg-bg-light border px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2 transition-all resize-none ${errors.message ? 'border-accent focus:ring-accent/20' : 'border-gray-200 focus:ring-primary/20'
+              }`}
           ></textarea>
           {errors.message && <p className="text-xs text-accent mt-1">{errors.message}</p>}
         </div>
