@@ -251,12 +251,6 @@ export default function Navbar() {
               </li>
             </ul>
 
-            <Link
-              to="/contact"
-              className="bg-accent text-white px-6 py-2.5 rounded-full font-medium text-sm hover:bg-accent/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-            >
-              Enroll Now
-            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -412,12 +406,6 @@ export default function Navbar() {
                 </li>
               </ul>
               
-              <Link
-                to="/contact"
-                className="w-fit bg-accent text-white px-8 py-3 rounded-xl font-semibold text-center mt-2 shadow-md hover:bg-accent/90 transition-colors"
-              >
-                Enroll Now
-              </Link>
             </div>
           </motion.div>
         )}

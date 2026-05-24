@@ -99,7 +99,7 @@ export default function HeroSection() {
                 to="/contact"
                 className="bg-white text-text-dark border border-gray-200 px-8 py-3.5 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-md hover:scale-105"
               >
-                Contact Us
+                Enroll Now
               </Link>
             </motion.div>
           </motion.div>
